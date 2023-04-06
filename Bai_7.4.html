@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table{
+      text-align: left;
+      width: 600px;
+    }
+  </style>
+</head>
+<body>
+<form>
+  <table>
+    <tr>
+      <th>Amount</th>
+      <th>From Curency</th>
+      <th> To Curency</th>
+    </tr>
+    <tr>
+      <td><input placeholder="Nhập số tền" id="tien"></td>
+      <td>
+        <select id="sl1">
+          <option value="23000">VND</option>
+          <option value="1">USD</option>
+        </select>
+      </td>
+      <td>
+        <select id="sl2">
+          <option value="1">USD</option>
+          <option value="23000">VND</option>
+        </select>
+      </td>
+      <td>
+        <button onclick="convert()" >Convert</button>
+      </td>
+
+    </tr>
+  </table>
+  <br>
+  <p id="result"></p>
+</form>
+
+
+</body>
+</html>
+<script>
+ function convert(){
+   let input= document.getElementById("tien");
+   let sl1 = document.getElementById("sl1");
+   let sl2 = document.getElementById("sl2");
+
+   let tien= input.value;
+   let s1 = sl1.value;
+   let s2 = sl2.value;
+   let result = tien/s1*s2
+
+  alert(result)
+
+ }
+
+
+</script>
